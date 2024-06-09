@@ -11,6 +11,10 @@
         <h1>Ticker Pull Website</h1>
     </header>
     <section>Please enter a traded ticker into entry line</section>
+    <form action="/search" method="GET">
+        <input id="searchbar" onkeyup="searchTicker" type="search" name="query" placeholder="Enter Ticker here...">
+        <button type="submit">Search</button>
+    </form>
 
     <section>
         <h2>Required Data</h2>
