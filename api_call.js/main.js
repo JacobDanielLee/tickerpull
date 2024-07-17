@@ -4,10 +4,11 @@ const fetchurl = 'https://data.sec.gov/api/xbrl/companyfacts/CIK'+ cik + '.json'
 const button = document.getElementById('srcButton');
 const input = document.getElementById('searchbar').value;
 
-button.addEventListener('click',() => {
+function searchTicker() {button.addEventListener('click',() => {
     cik = input.value;
     console.log(cik);
-});
+});}
+
 
 function fetchData() {
     fetch(fetchurl)
