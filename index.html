@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JDL Ticker Pull</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.1.1/dist/index.min.js"></script>
 </head>
 <body>
     <header>
         <h1>Ticker Pull Website</h1>
     </header>
-    <section>Please enter an SEC CIK into entry line</section>
+    <section>Please enter an ticker into entry line</section>
     <form action="/search" method="GET">
-        <input id="searchbar" onkeyup="searchTicker" type="search" name="query" placeholder="Enter CIK here...">
-        <button type="button" onclick="searchTicker">Search</button>
+        <input id="searchbar" onkeyup="searchTicker" type="search" name="query" placeholder="Enter CIK here..." required>
+        <button type="submit" id="srcButton">Search</button>
     </form>
 
     <section>
@@ -79,9 +80,9 @@
                 </tr>
                 <tr>
                     <td>New shares issued from options - millions</td>
-                    <td>16864919</td>
-                    <td>16864919</td>
-                    <td>16864919</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -311,6 +312,17 @@
                 </tr>
                 <tr>
                     <td>Proceeds from Sale of Marketable Securities</td>
+                    <td>16864919</td>
+                    <td>16864919</td>
+                    <td>16864919</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Example</td>
+                </tr>
+                <tr>
+                    <td>Diluted Weighted Average Shares</td>
                     <td>16864919</td>
                     <td>16864919</td>
                     <td>16864919</td>
