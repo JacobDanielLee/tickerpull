@@ -1,4 +1,4 @@
-document.getElementById('srcButton').addEventListener('click', searchTicker);
+document.getElementById('srcButton').addEventListener('click');
 async () => {
     const tickers = document.getElementById('ticker').value.split(',');
     const tickertoCikdf = await FetchCik();
