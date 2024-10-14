@@ -11,6 +11,7 @@ async () => {
     //Find https://www.sec.gov./files/company_tickers.json  and save as link?
     //const ciklink = 
 
+//This function returns a dataframe that has tickers as the keys and cik as the values. To map Tickers to CIK numbers
 async function FetchCik() {   
     const url = "https://www.sec.gov./files/company_tickers.json";
     const response = await fetch(url);
@@ -20,7 +21,7 @@ async function FetchCik() {
     return df;
 }
 
- 
+//This function will take the entered ticker, find the corresponding CIK, and save it down. 
 async function cikNum(tickers, tickerDF) {
     const cikList = [];
     tickers.forEach(ticker => {
@@ -32,6 +33,7 @@ async function cikNum(tickers, tickerDF) {
     return cikList;
 }
 
+//Takes the CIKs and creates respective dataframes for each to then be passed into append data that populates the page
 async function fetchData(cikList) {
     const dataframes = [];
     for (const cik of cikList) {
@@ -41,8 +43,10 @@ async function fetchData(cikList) {
         const df = new dfd.Dataframe(data);
         dataframes.push(df);
     }
-    return dataframes;
-    
+
+    for (const d of dataframes) {
+        appendData(d);
+    }
 }
 
 //This function attempts to display all the relevant data in the dataframe and move it to HTML
