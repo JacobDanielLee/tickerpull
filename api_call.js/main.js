@@ -1,10 +1,10 @@
-document.getElementById('srcButton').addEventListener('click');
-async () => {
-    const tickers = document.getElementById('ticker').value.split(',');
+document.getElementById('srcButton').addEventListener('click', async () => {
+    const tickers = document.getElementById('searchbar').value.split(',');
     const tickertoCikdf = await FetchCik();
     const cikList = await cikNum(tickers, tickertoCikdf);
     await fetchData(cikList);
-}
+});
+
 
 //New Note: We will most likely need an input before checking the CIK against the website and loading all stock data for ut
     //console.log("This loads the data")
