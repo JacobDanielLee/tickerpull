@@ -24,6 +24,7 @@ async function cikNum(tickers, tickerDF) {
             cikList.push(match.iloc({rows: [0]}).cik)
         }
     });
+    console.log(cikList);
     return cikList;
 }
 
