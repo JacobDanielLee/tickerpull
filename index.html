@@ -11,7 +11,7 @@
     <header>
         <h1>Ticker Pull Website</h1>
     </header>
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
     <section>Please enter an ticker into entry line</section>
     <form id="searchform">
         <input id="searchbar" type="search" placeholder="Please Enter Ticker" required>
@@ -339,7 +339,7 @@
         </table>
     </section>
 
-    <script src="main.js">    
+    <script src="./main.js">    
         document.getElementById('srcButton').addEventListener('click', async () => {
             const tickers = document.getElementById('searchbar').value.split(',');
             const tickertoCikdf = await FetchCik();
