@@ -341,6 +341,7 @@
 
     <script src="api_call.js/main.js">    
         document.getElementById('srcButton').addEventListener('click', async () => {
+            console.log("example");
             const tickers = document.getElementById('searchbar').value.split(',');
             const tickertoCikdf = await FetchCik();
             const cikList = await cikNum(tickers, tickertoCikdf);
