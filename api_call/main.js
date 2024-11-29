@@ -5,13 +5,14 @@
     //Find https://www.sec.gov./files/company_tickers.json  and save as link?
     //const ciklink = 
 
-
-document.getElementById('srcButton').addEventListener('click', async () => {
-    console.log("Start of Function");
-    const tickers = document.getElementById('searchbar').value.split(',');
-    const tickertoCikdf = await FetchCik();
-    const cikList = await cikNum(tickers, tickertoCikdf);
-    await fetchData(cikList);
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('srcButton').addEventListener('click', async () => {
+        console.log("Start of Function");
+        const tickers = document.getElementById('searchbar').value.split(',');
+        const tickertoCikdf = await FetchCik();
+        const cikList = await cikNum(tickers, tickertoCikdf);
+        await fetchData(cikList);
+    });
 });
 
 //This function returns a dataframe that has tickers as the keys and cik as the values. To map Tickers to CIK numbers
