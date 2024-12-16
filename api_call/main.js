@@ -17,11 +17,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //This function returns a dataframe that has tickers as the keys and cik as the values. To map Tickers to CIK numbers
 async function FetchCik() {   
-    const url = "https://www.sec.gov./files/company_tickers.json";
-    const response = await fetch(url);
-    const data = await response.json();
-    const tickers = Object.values(data).map(entry => ({ticker: entry.ticker, cik: entry.cik_str}));
-    const df = new dfd.DataFrame(tickers);
+
+    const express = require('express');
+    const fetch = require('node-fetch');
+    const app = express();
+
+    app.get('/proxy', async(req, res) => {
+
+        const url = "https://www.sec.gov./files/company_tickers.json";
+        const response = await fetch(url);
+        const data = await response.json();
+
+        res.setHeader('Access-Control-Allow-Origin','*');
+        res.json(data);
+
+        const tickers = Object.values(data).map(entry => ({ticker: entry.ticker, cik: entry.cik_str}));
+        const df = new dfd.DataFrame(tickers);
+    });
+
+    app.listen(3000, () => {
+        console.log('Proxy server running on port 3000');
+    });
+
+
+    
+    
     console.log("Completed Fetch CIK")
     return df;
 }
