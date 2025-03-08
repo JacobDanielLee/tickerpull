@@ -52,20 +52,18 @@
                 <th>netIncome</th>
             </tr>
         </thead>
-        <tbody>
-            <!-- 10 empty rows -->
-            <tr><td colspan="29"></td></tr>
-            <tr><td colspan="29"></td></tr>
-            <tr><td colspan="29"></td></tr>
-            <tr><td colspan="29"></td></tr>
-            <tr><td colspan="29"></td></tr>
-            <tr><td colspan="29"></td></tr>
-            <tr><td colspan="29"></td></tr>
-            <tr><td colspan="29"></td></tr>
-            <tr><td colspan="29"></td></tr>
-            <tr><td colspan="29"></td></tr>
-        </tbody>
+        <script>
+            const tableBody = document.querySelector("tbody");
+            for (let i = 0; i < 10; i++) {
+                let row = "<tr>";
+                for (let j = 0; j < 26; j++) {  // 26 columns
+                    row += "<td></td>";
+                }
+                row += "</tr>";
+                tableBody.innerHTML += row;
+            }
+        </script>
     </table>
     
-    <script src="api_call/main.js"></script>
+    <script src="api_call/manual.js"></script>
 </body>
