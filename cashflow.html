@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Data - Ticker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.1.1/dist/index.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Manual Data Source</h1>
+    </header>
+    <section>Please enter an ticker into entry line</section>
+    <form id="searchform">
+        <input id="searchbar" type="search" placeholder="Please Enter Ticker" required>
+        <button type="button" id="srcButton">Search</button>
+    </form>
+
+    <h2>General Stock Data</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>fiscalDateEnding</th>
+                <th>reportedCurrency</th>
+                <th>operatingCashflow</th>
+                <th>paymentsForOperatingActivities</th>
+                <th>proceedsFromOperatingActivities</th>
+                <th>changeInOperatingLiabilities</th>
+                <th>changeInOperatingAssets</th>
+                <th>depreciationDepletionAndAmortization</th>
+                <th>capitalExpenditures</th>
+                <th>changeInReceivables</th>
+                <th>changeInInventory</th>
+                <th>profitLoss</th>
+                <th>cashflowFromInvestment</th>
+                <th>cashflowFromFinancing</th>
+                <th>proceedsFromRepaymentsOfShortTermDebt</th>
+                <th>paymentsForRepurchaseOfCommonStock</th>
+                <th>paymentsForRepurchaseOfEquity</th>
+                <th>paymentsForRepurchaseOfPreferredStock</th>
+                <th>dividendPayout</th>
+                <th>dividendPayoutCommonStock</th>
+                <th>dividendPayoutPreferredStock</th>
+                <th>proceedsFromIssuanceOfCommonStock</th>
+                <th>proceedsFromIssuanceOfLongTermDebtAndCapitalSecuritiesNet</th>
+                <th>proceedsFromIssuanceOfPreferredStock</th>
+                <th>proceedsFromRepurchaseOfEquity</th>
+                <th>proceedsFromSaleOfTreasuryStock</th>
+                <th>changeInCashAndCashEquivalents</th>
+                <th>changeInExchangeRate</th>
+                <th>netIncome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 10 empty rows -->
+            <tr><td colspan="29"></td></tr>
+            <tr><td colspan="29"></td></tr>
+            <tr><td colspan="29"></td></tr>
+            <tr><td colspan="29"></td></tr>
+            <tr><td colspan="29"></td></tr>
+            <tr><td colspan="29"></td></tr>
+            <tr><td colspan="29"></td></tr>
+            <tr><td colspan="29"></td></tr>
+            <tr><td colspan="29"></td></tr>
+            <tr><td colspan="29"></td></tr>
+        </tbody>
+    </table>
+    
+    <script src="api_call/main.js"></script>
+</body>

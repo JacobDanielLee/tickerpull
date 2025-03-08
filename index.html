@@ -11,14 +11,13 @@
     <header>
         <h1>Ticker Pull Website</h1>
     </header>
-    <script src="api_call/main.js"></script>
     <section>Please enter an ticker into entry line</section>
     <form id="searchform">
         <input id="searchbar" type="search" placeholder="Please Enter Ticker" required>
         <button type="button" id="srcButton">Search</button>
     </form>
 
-    
+    <section><a href = "income.html" >Click here to pull manual data </a></section>    
 
     <section>
         <h2>Required Data</h2>
@@ -339,14 +338,6 @@
         </table>
     </section>
 
-    <script src="api_call/main.js">    
-        document.getElementById('srcButton').addEventListener('click', async () => {
-            console.log("example");
-            const tickers = document.getElementById('searchbar').value.split(',');
-            const tickertoCikdf = await FetchCik();
-            const cikList = await cikNum(tickers, tickertoCikdf);
-            await fetchData(cikList);
-        });
-    </script>
+    <script src="api_call/manual.js"></script>        
 </body>
 </html>

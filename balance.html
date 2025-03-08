@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Data - Ticker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.1.1/dist/index.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Manual Data Source</h1>
+    </header>
+    <section>Please enter an ticker into entry line</section>
+    <form id="searchform">
+        <input id="searchbar" type="search" placeholder="Please Enter Ticker" required>
+        <button type="button" id="srcButton">Search</button>
+    </form>
+
+    <h2>General Stock Data</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>fiscalDateEnding</th>
+                <th>reportedCurrency</th>
+                <th>totalAssets</th>
+                <th>totalCurrentAssets</th>
+                <th>cashAndCashEquivalentsAtCarryingValue</th>
+                <th>cashAndShortTermInvestments</th>
+                <th>inventory</th>
+                <th>currentNetReceivables</th>
+                <th>totalNonCurrentAssets</th>
+                <th>propertyPlantEquipment</th>
+                <th>accumulatedDepreciationAmortizationPPE</th>
+                <th>intangibleAssets</th>
+                <th>intangibleAssetsExcludingGoodwill</th>
+                <th>goodwill</th>
+                <th>investments</th>
+                <th>longTermInvestments</th>
+                <th>shortTermInvestments</th>
+                <th>otherCurrentAssets</th>
+                <th>otherNonCurrentAssets</th>
+                <th>totalLiabilities</th>
+                <th>totalCurrentLiabilities</th>
+                <th>currentAccountsPayable</th>
+                <th>deferredRevenue</th>
+                <th>currentDebt</th>
+                <th>shortTermDebt</th>
+                <th>totalNonCurrentLiabilities</th>
+                <th>capitalLeaseObligations</th>
+                <th>longTermDebt</th>
+                <th>currentLongTermDebt</th>
+                <th>longTermDebtNoncurrent</th>
+                <th>shortLongTermDebtTotal</th>
+                <th>otherCurrentLiabilities</th>
+                <th>otherNonCurrentLiabilities</th>
+                <th>totalShareholderEquity</th>
+                <th>treasuryStock</th>
+                <th>retainedEarnings</th>
+                <th>commonStock</th>
+                <th>commonStockSharesOutstanding</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 10 empty rows -->
+            <tr><td colspan="38"></td></tr>
+            <tr><td colspan="38"></td></tr>
+            <tr><td colspan="38"></td></tr>
+            <tr><td colspan="38"></td></tr>
+            <tr><td colspan="38"></td></tr>
+            <tr><td colspan="38"></td></tr>
+            <tr><td colspan="38"></td></tr>
+            <tr><td colspan="38"></td></tr>
+            <tr><td colspan="38"></td></tr>
+            <tr><td colspan="38"></td></tr>
+        </tbody>
+    </table>
+    
+    <script src="api_call/main.js"></script>
+</body>

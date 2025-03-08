@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Data - Ticker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.1.1/dist/index.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Manual Data Source</h1>
+    </header>
+    <section>Please enter an ticker into entry line</section>
+    <form id="searchform">
+        <input id="searchbar" type="search" placeholder="Please Enter Ticker" required>
+        <button type="button" id="srcButton">Search</button>
+    </form>
+
+    <h2>General Stock Data</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>fiscalDateEnding</th>
+                <th>reportedCurrency</th>
+                <th>grossProfit</th>
+                <th>totalRevenue</th>
+                <th>costOfRevenue</th>
+                <th>costofGoodsAndServicesSold</th>
+                <th>operatingIncome</th>
+                <th>sellingGeneralAndAdministrative</th>
+                <th>researchAndDevelopment</th>
+                <th>operatingExpenses</th>
+                <th>investmentIncomeNet</th>
+                <th>netInterestIncome</th>
+                <th>interestIncome</th>
+                <th>interestExpense</th>
+                <th>nonInterestIncome</th>
+                <th>otherNonOperatingIncome</th>
+                <th>depreciation</th>
+                <th>depreciationAndAmortization</th>
+                <th>incomeBeforeTax</th>
+                <th>incomeTaxExpense</th>
+                <th>interestAndDebtExpense</th>
+                <th>netIncomeFromContinuingOperations</th>
+                <th>comprehensiveIncomeNetOfTax</th>
+                <th>ebit</th>
+                <th>ebitda</th>
+                <th>netIncome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 10 empty rows -->
+            <tr><td colspan="26"></td></tr>
+            <tr><td colspan="26"></td></tr>
+            <tr><td colspan="26"></td></tr>
+            <tr><td colspan="26"></td></tr>
+            <tr><td colspan="26"></td></tr>
+            <tr><td colspan="26"></td></tr>
+            <tr><td colspan="26"></td></tr>
+            <tr><td colspan="26"></td></tr>
+            <tr><td colspan="26"></td></tr>
+            <tr><td colspan="26"></td></tr>
+        </tbody>
+    </table>
+    
+    <script src="api_call/main.js"></script>
+</body>
